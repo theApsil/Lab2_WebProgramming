@@ -19,9 +19,103 @@
 	</p>
 
 
-	<p>
-		Место для графиков
-	</p>
+<details>
+    <summary> График </summary>
+    <form>
+        <table>
+          <tr>
+            <th>Значениe по оси OX</th>
+            <th>Результат</th>
+          </tr>
+          <tr>
+            <td>
+              <input type="radio" name="ox" value="0">Население<br>
+              <input type="radio" name="ox" value="1">Площадь<br>
+              <input type="radio" name="ox" value="3">Год основания<br>
+            </td>
+            <td>
+              <input type="checkbox" name="oy" value="0">Максимальное население<br>
+              <input type="checkbox" name="oy" value="1">Максимальная площадь<br>
+			  <input type="checkbox" name="oy" value="3">Количество построенных городов по году основаня<br>
+            </td>
+          </tr>
+        </table>
+		<input type=button value="Построить">
+		<p>Здесь будет график</p>
+	</form>	
+</details> 
+
+<details>
+    <summary>Сортировка</summary>
+    <form>
+	  <p>
+          Первый уровень:
+          <select name="sortFirst">
+            <option value="0">Нет</option>
+            <option value="1">Название города</option>
+            <option value="2">Население</option>
+            <option value="3">Площадь</option>
+            <option value="4">Префектура</option>
+			<option value="6">Год основания</option>
+ 
+          </select>
+          по убыванию? <input  type="checkbox"  name= "descFirst" >
+        </p>  
+        <p>
+          Второй уровень:
+		  <select name="sortSecond">
+            <option value="0">Нет</option>
+            <option value="1">Название города</option>
+            <option value="2">Население</option>
+            <option value="3">Площадь</option>
+            <option value="4">Префектура</option>
+			<option value="6">Год основания</option>
+          </select>
+          по убыванию? <input  type="checkbox"  name= "descSecond" >
+        </p>
+        <p>
+          Третий уровень:
+          <select name="sortThird">
+             <option value="0">Нет</option>
+            <option value="1">Название города</option>
+            <option value="2">Население</option>
+            <option value="3">Площадь</option>
+            <option value="4">Префектура</option>
+			<option value="6">Год основания</option>
+          </select>
+          по убыванию? <input  type="checkbox"  name= "descThird" >
+        </p>
+      <input type=button value="Сортировать">		
+	</form>	
+</details> 
+
+<details>
+    <summary> Фильтр</summary>
+    <form>
+        <p>
+           <label for="name">Название города:</label>
+		   <input type=text name="name">
+        </p>
+        <p>
+		    <label for="pFrom">Население:</label>
+            от <input type=text name="pFrom"> до <input type=text name="pTo">
+        </p>
+        <p>
+		   <label for="sFrom">Площадь:</label>
+          от <input type=text name="sFrom"> до <input type=text name="sTo">
+        </p>
+		 <p>
+		   <label for="prefecture">Префектура:</label>
+           <input type=text name="prefecture">
+        </p>
+ 		<p>
+		  <label for="yFrom">Год основания: </label>
+           от <input type=text name="yFrom"> до <input type=text name="yFo">
+        </p>
+        <input type=button value="Найти">		
+	</form>	
+</details> 
+<br>
 	<table border="2" cellpadding="5" cellspacing="0">
 		<font size="7">
 			<th>
